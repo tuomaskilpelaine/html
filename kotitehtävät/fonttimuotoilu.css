@@ -1,0 +1,36 @@
+h1{
+    font-family: "helvetica";
+}
+
+.hauki1 {
+    font-family: "Lucida console";
+    font-weight: bold;
+}
+
+.hauki2 {
+    font-family: "Garamond";
+    text-align: center;
+}
+
+.hauki3 {
+    font-weight: 900;
+    text-align: right;
+}
+
+.hauki4 {
+    font-size: 10em;
+}
+
+.hauki5{
+    font-size: 5px;
+    font-weight: bold;
+}
+
+.hauki6 {
+    font-family: "cursive";
+    font-size: normal;
+}
+
+#grad {
+    background-image: linear-gradient(red, yellow);
+}
