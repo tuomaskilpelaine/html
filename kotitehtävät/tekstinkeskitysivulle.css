@@ -1,0 +1,25 @@
+div{
+    height: 200px;
+    padding-top: 100px;
+    display: flex;
+    align-items: left;
+    justify-content: bottom;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    height: 300px;
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+

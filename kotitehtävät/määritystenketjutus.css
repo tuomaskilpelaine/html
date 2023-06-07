@@ -1,0 +1,16 @@
+
+
+body{
+    background-color: cyan;
+    height: 10vh;
+}
+
+.content{
+    background-color: coral;
+    padding:30px;
+    height: 30vh;
+    min-height: 100px;
+}
+nav span.title{
+    color:red;
+}

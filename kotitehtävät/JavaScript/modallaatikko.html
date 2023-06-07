@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Modaalilaatikko esimerkki</h2>
+  <button onclick="avaaModaalilaatikko()">Avaa modaalilaatikko</button>
+
+  <div id="modalLaatikko" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="suljeModaalilaatikko()">&times;</span>
+      <h3>Tervetuloa Modaalilaatikkoon!</h3>
+      <p>Tämä on esimerkki modaalilaatikon toteuttamisesta JavaScriptin avulla.</p>
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById("modalLaatikko");
+
+    function avaaModaalilaatikko() {
+      modal.style.display = "block";
+    }
+
+    function suljeModaalilaatikko() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
