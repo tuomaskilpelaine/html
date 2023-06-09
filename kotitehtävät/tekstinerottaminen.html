@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+    <script type = "text/javascript">
+        var str = "omenat on pyöreitä, ja omenat on mehukkaita.";
+        var splitted = str.split(" ", 3);
+        document.write( splitted );
+        var str = "omenat on pyöreitä, ja omenat on mehukkaita.";
+         var sliced = str.slice(3, -2);         
+         document.write( sliced );
+         
+         var arr = new Array("ensinmäinen","toinen","kolmas");
+         
+         var str = arr.join();
+         document.write("str : " + str ); 
+         
+         var str = arr.join(", ");
+         document.write("<br />str : " + str ); 
+         
+         var str = arr.join(" + ");
+         document.write("<br />str : " + str ); 
+     </script> 
+</body>
+</html>
