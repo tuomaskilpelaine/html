@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+// Globaali muuttuja
+var globalVariable = "Tämä on globaali muuttuja";
+
+function testFunction() {
+  // Lokaali muuttuja
+  var localVariable = "Tämä on lokaali muuttuja";
+
+  console.log(globalVariable);  // Tulostaa: Tämä on globaali muuttuja
+  console.log(localVariable);   // Tulostaa: Tämä on lokaali muuttuja
+}
+
+testFunction();
+
+console.log(globalVariable);  // Tulostaa: Tämä on globaali muuttuja
+console.log(localVariable);   // Aiheuttaa virheen: localVariable ei ole määritelty
+</script>
+
+</body>
+</html>

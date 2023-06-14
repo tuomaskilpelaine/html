@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Vertailuesimerkki</h1>
+
+    <div>
+      <label for="input">Syötä luku:</label>
+      <input type="text" id="input" />
+      <button onclick="vertaile()">Vertaa</button>
+    </div>
+  
+    <div id="tulos"></div>
+
+
+    <script>
+        function vertaile() {
+          var syote = parseInt(document.getElementById("input").value);
+          var vertailtava = 10;
+    
+          if (syote == vertailtava) {
+            document.getElementById("tulos").textContent = "Luku on yhtä suuri kuin vertailtava.";
+          } else if (syote > vertailtava) {
+            document.getElementById("tulos").textContent = "Luku on suurempi kuin vertailtava.";
+          } else {
+            document.getElementById("tulos").textContent = "Luku on pienempi kuin vertailtava.";
+          }
+        }
+      </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Laskin</h1>
+
+    <div>
+      <label for="input">Syötä luku:</label>
+      <input type="text" id="input" />
+      <button onclick="lisaa100()">Lisää 100</button>
+    </div>
+  
+    <div id="tulos"></div>
+
+
+
+    <script>
+        function lisaa100() {
+          var syote = parseInt(document.getElementById("input").value);
+          var tulos = syote + 100;
+          document.getElementById("tulos").textContent = "Lopputulos: " + tulos;
+        }
+      </script>
+
+
+</body>
+</html>

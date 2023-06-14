@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Alustetaan taulukko, johon tallennetaan nimiä
+        var nimet = ["Matti", "Maija", "Liisa", "Juha"];
+    
+        // Funktio, joka käsittelee jokaisen nimen
+        function kasitteleNimi(nimi) {
+          console.log("Tervehdys, " + nimi + "!");
+        }
+    
+        // Käytetään forEach-luuppia käymään läpi jokainen nimi taulukossa
+        nimet.forEach(kasitteleNimi);
+      </script>
+</head>
+<body>
+    <h1>forEach-luuppi esimerkki</h1>
+    <p>Tarkista konsolista tulostettu tervehdys jokaiselle nimelle!</p>
+</body>
+</html>

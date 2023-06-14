@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>syötä internet-osoite</h1>
+
+  <div>
+    <label for="urlInput">Enter a URL:</label>
+    <input type="text" id="urlInput" />
+    <button onclick="validateURL()">Tulosta</button>
+  </div>
+
+  <div id="result">
+    <h2>Result:</h2>
+    <p id="urlLink"></p>
+  </div>
+
+    <script>
+        function validateURL() {
+          var userInput = document.getElementById("urlInput").value;
+          var urlElement = document.getElementById("urlLink");
+    
+          var prefix = "http";
+          var formattedURL = userInput;
+
+          
+    
+    
+          if (userInput.slice(0, 4) !== prefix) {
+            formattedURL = prefix + "://" + userInput;
+          }
+    
+          
+          var linkElement = document.createElement("a");
+          linkElement.href = formattedURL;
+          linkElement.textContent = formattedURL;
+          urlElement.innerHTML = ""; 
+          urlElement.appendChild(linkElement);
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="käyttäjäsyöte.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>syötä nimesi</h1>
+
+    <div>
+        <label for="userInput">Enter your text:</label>
+        <input type="text" id="userInput" />
+        <button onclick="updateText()">Update</button>
+      </div>
+    
+      <div>
+        <h2>Tulos:</h2>
+        <p id="resultText"></p>
+      </div>
+  
+    <script>
+       function updateText() {
+      var userInput = prompt("syötänimesi:");
+      var resultElement = document.getElementById("resultText");
+      resultElement.textContent = userInput;
+    }
+    </script>
+  
+</body>
+</html>

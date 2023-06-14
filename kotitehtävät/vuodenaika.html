@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Season Analysis</h1>
+
+    <div>
+      <label for="birthMonth">Enter your birth month:</label>
+      <input type="text" id="birthMonth" />
+      <button onclick="analyzeSeason()">Analyze</button>
+    </div>
+  
+    <div id="result">
+      <h2>Result:</h2>
+      <p id="seasonText"></p>
+    </div>
+
+    <script>
+        function analyzeSeason() {
+          var birthMonth = document.getElementById("birthMonth").value.toLowerCase();
+          var seasonElement = document.getElementById("seasonText");
+    
+          if (birthMonth === "joulukuu" || birthMonth === "tammikuu" || birthMonth === "helmikuu") {
+            seasonElement.textContent = "Syntymäkuukautesi on talvea.";
+          } else if (birthMonth === "maaliskuu" || birthMonth === "huhtikuu" || birthMonth === "toukokuu") {
+            seasonElement.textContent = "Syntymäkuukautesi on kevättä.";
+          } else if (birthMonth === "kesäkuu" || birthMonth === "heinäkuu" || birthMonth === "elokuu") {
+            seasonElement.textContent = "Syntymäkuukautesi on kesää.";
+          } else if (birthMonth === "syyskuu" || birthMonth === "lokakuu" || birthMonth === "marraskuu") {
+            seasonElement.textContent = "Syntymäkuukautesi on syksyä.";
+          } else {
+            seasonElement.textContent = "Antamasi kuukausi ei ole kelvollinen.";
+          }
+        }
+      </script>
+</body>
+</html>

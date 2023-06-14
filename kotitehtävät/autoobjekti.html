@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label for="merkki">Merkki:</label>
+        <input type="text" id="merkki" />
+      </div>
+    
+      <div>
+        <label for="hevosvoimat">Hevosvoimat:</label>
+        <input type="number" id="hevosvoimat" />
+      </div>
+    
+      <div>
+        <label for="malli">Malli:</label>
+        <input type="text" id="malli" />
+      </div>
+    
+      <div>
+        <label for="valmistajaUrl">Valmistajan www-osoite:</label>
+        <input type="text" id="valmistajaUrl" />
+      </div>
+    
+      <button id="tallenna">Tallenna</button>
+    
+      <h2>Tiedot:</h2>
+    
+      <div id="tiedot"></div>
+
+      <script>
+        var Auto = {
+          merkki: '',
+          hevosvoimat: 0,
+          malli: '',
+          valmistajaUrl: '',
+    
+          tulostaTiedot: function() {
+            var tiedotElementti = document.getElementById('tiedot');
+            tiedotElementti.innerHTML = 'Merkki: ' + this.merkki + '<br>';
+            tiedotElementti.innerHTML += 'Hevosvoimat: ' + this.hevosvoimat + '<br>';
+            tiedotElementti.innerHTML += 'Malli: ' + this.malli + '<br>';
+            tiedotElementti.innerHTML += 'Valmistajan www-osoite: <a href="' + this.valmistajaUrl + '">' + this.valmistajaUrl + '</a>';
+          }
+        };
+    
+        var tallennaButton = document.getElementById('tallenna');
+        tallennaButton.addEventListener('click', function() {
+          Auto.merkki = document.getElementById('merkki').value;
+          Auto.hevosvoimat = parseInt(document.getElementById('hevosvoimat').value);
+          Auto.malli = document.getElementById('malli').value;
+          Auto.valmistajaUrl = document.getElementById('valmistajaUrl').value;
+    
+          Auto.tulostaTiedot();
+        });
+      </script>
+
+</body>
+</html>

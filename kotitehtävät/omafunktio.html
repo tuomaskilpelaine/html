@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Custom Function Example</h1>
+
+    <p>This HTML page demonstrates a custom function.</p>
+  
+    <div id="output"></div>
+
+
+    <script>
+        // Oma funktio, joka laskee annetun luvun neliön
+        function calculateSquare(number) {
+          return number * number;
+        }
+    
+        // Omaa funktiota käytetään
+        var inputNumber = 4;
+        var result = calculateSquare(inputNumber);
+    
+       // Näytetään tulos sivulla
+        var outputElement = document.getElementById("output");
+        outputElement.textContent = "The square of " + inputNumber + " is " + result + ".";
+      </script>
+
+</body>
+</html>

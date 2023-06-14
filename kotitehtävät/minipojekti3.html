@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Number Validation</h1>
+
+    <div>
+      <label for="numberInput">Enter a number:</label>
+      <input type="text" id="numberInput" />
+      <button onclick="validateNumber()">Validate</button>
+    </div>
+  
+    <div id="result">
+      <h2>Result:</h2>
+      <p id="textToChange">This text can be changed</p>
+    </div>
+
+    <script>
+        function validateNumber() {
+          var userInput = prompt("Please enter a number (greater than 18):");
+          var number = parseInt(userInput);
+    
+          if (isNaN(number)) {
+            alert("Invalid number. Please try again.");
+            return;
+          }
+    
+          if (number > 18) {
+            var textToChange = document.getElementById("textToChange");
+            textToChange.textContent = "Number is greater than 18!";
+          }
+        }
+      </script>
+
+</body>
+</html>

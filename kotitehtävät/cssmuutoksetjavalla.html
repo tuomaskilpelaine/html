@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label for="taustavari">Syötä taustaväri:</label>
+        <input type="color" id="taustavari" />
+      </div>
+    
+      <div>
+        <label for="tekstivari">Syötä tekstiväri:</label>
+        <input type="color" id="tekstivari" />
+      </div>
+    
+      <button id="muutaVari">Muuta väriä</button>
+
+       <script>
+    var muutaVariButton = document.getElementById('muutaVari');
+    muutaVariButton.addEventListener('click', function() {
+      var taustavari = document.getElementById('taustavari').value;
+      var tekstivari = document.getElementById('tekstivari').value;
+
+      document.body.style.backgroundColor = taustavari;
+      document.body.style.color = tekstivari;
+    });
+  </script>
+
+</body>
+</html>

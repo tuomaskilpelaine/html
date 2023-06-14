@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><h1>Text Manipulation</h1>
+
+<div>
+  <label for="userText">Enter your text:</label>
+  <input type="text" id="userText" />
+  <button onclick="manipulateText()">Manipulate</button>
+</div>
+
+<div id="result">
+  <h2>Result:</h2>
+  <ul id="manipulatedList"></ul>
+</div>
+
+<script>
+  function manipulateText() {
+    var userText = document.getElementById("userText").value;
+    var manipulatedList = document.getElementById("manipulatedList");
+
+    // Tyhjennetään aiemmat tulokset
+    manipulatedList.innerHTML = "";
+
+    // Muokataan tekstiä kolmella eri tavalla
+    var manipulatedText1 = userText.toUpperCase();
+    var manipulatedText2 = userText.split("").reverse().join("");
+    var manipulatedText3 = userText.replace(/[aeiou]/gi, "*");
+
+    // Lisätään muokatut tekstit listaan
+    var listItem1 = document.createElement("li");
+    listItem1.textContent = manipulatedText1;
+    manipulatedList.appendChild(listItem1);
+
+    var listItem2 = document.createElement("li");
+    listItem2.textContent = manipulatedText2;
+    manipulatedList.appendChild(listItem2);
+
+    var listItem3 = document.createElement("li");
+    listItem3.textContent = manipulatedText3;
+    manipulatedList.appendChild(listItem3);
+  }
+</script>
+</body>
+
+</html>
